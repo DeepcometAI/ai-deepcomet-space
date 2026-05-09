@@ -1,75 +1,88 @@
-# Nuxt Minimal Starter
+# Deepcomet AI Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The official website for Deepcomet AI — Accelerating Civilization's Future through Vertical AI Integration.
+
+**Live URL:** [https://ai.deepcomet.space](https://ai.deepcomet.space)
+
+## Tech Stack
+
+- **Framework:** [Nuxt 4](https://nuxt.com/) with Vue 3 & TypeScript
+- **Styling:** [TailwindCSS](https://tailwindcss.com/)
+- **Deployment:** [GitHub Pages](https://pages.github.com/) via GitHub Actions
+- **Custom Domain:** `ai.deepcomet.space`
+
+## Project Structure
+
+```
+app/
+├── components/         # Reusable Vue components
+│   ├── AnimatedCard.vue
+│   ├── CometBackground.vue
+│   ├── ScrollReveal.vue
+│   └── TextTypewriter.vue
+├── layouts/
+│   └── default.vue     # Site layout with nav & footer
+├── pages/              # File-based routing
+│   ├── index.vue       # Homepage
+│   ├── about.vue
+│   ├── projects.vue    # Ecosystem / Projects
+│   ├── roadmap.vue
+│   ├── contact.vue
+│   ├── docs/
+│   │   ├── index.vue   # Documentation hub
+│   │   ├── aurelia-intro.vue
+│   │   ├── skyos.vue
+│   │   └── compiler.vue
+│   └── blog/
+│       ├── index.vue   # Blog listing
+│       └── release-0-1-alpha.vue
+public/
+├── CNAME               # Custom domain config
+└── .nojekyll           # Disable Jekyll processing
+```
 
 ## Setup
 
-Make sure to install dependencies:
+Install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Open `http://localhost:3000` in your browser.
 
-Build the application for production:
+## Build & Deploy
+
+### Local Production Build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm generate    # Static site generation
+pnpm preview   # Preview the build locally
 ```
 
-Locally preview production build:
+### Automatic Deployment
 
-```bash
-# npm
-npm run preview
+Pushing to the `main` branch triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`) which builds and deploys to GitHub Pages automatically.
 
-# pnpm
-pnpm preview
+## DNS Configuration
 
-# yarn
-yarn preview
+To use the custom domain `ai.deepcomet.space`, add these **A records** at your domain registrar:
 
-# bun
-bun run preview
-```
+| Type | Host                | Value              |
+|------|---------------------|--------------------|
+| A    | ai.deepcomet.space  | 185.199.108.153    |
+| A    | ai.deepcomet.space  | 185.199.109.153    |
+| A    | ai.deepcomet.space  | 185.199.110.153    |
+| A    | ai.deepcomet.space  | 185.199.111.153    |
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Or use a **CNAME** record pointing to `yourusername.github.io`.
+
+## License
+
+© 2026 Deepcomet AI. All rights reserved.
