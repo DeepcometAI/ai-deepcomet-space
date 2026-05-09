@@ -26,6 +26,8 @@
             <NuxtLink to="/about" class="nav-link" :class="{ 'text-silver-100': $route.path === '/about' }">About</NuxtLink>
             <NuxtLink to="/projects" class="nav-link" :class="{ 'text-silver-100': $route.path === '/projects' }">Projects</NuxtLink>
             <NuxtLink to="/roadmap" class="nav-link" :class="{ 'text-silver-100': $route.path === '/roadmap' }">Roadmap</NuxtLink>
+            <NuxtLink to="/docs" class="nav-link" :class="{ 'text-silver-100': $route.path === '/docs' }">Docs</NuxtLink>
+            <NuxtLink to="/blog" class="nav-link" :class="{ 'text-silver-100': $route.path === '/blog' }">Blog</NuxtLink>
             <NuxtLink to="/contact" class="nav-link" :class="{ 'text-silver-100': $route.path === '/contact' }">Contact</NuxtLink>
           </div>
 
@@ -50,6 +52,8 @@
             <NuxtLink to="/about" class="text-silver-300 hover:text-white transition-colors" @click="mobileMenuOpen = false">About</NuxtLink>
             <NuxtLink to="/projects" class="text-silver-300 hover:text-white transition-colors" @click="mobileMenuOpen = false">Projects</NuxtLink>
             <NuxtLink to="/roadmap" class="text-silver-300 hover:text-white transition-colors" @click="mobileMenuOpen = false">Roadmap</NuxtLink>
+            <NuxtLink to="/docs" class="text-silver-300 hover:text-white transition-colors" @click="mobileMenuOpen = false">Docs</NuxtLink>
+            <NuxtLink to="/blog" class="text-silver-300 hover:text-white transition-colors" @click="mobileMenuOpen = false">Blog</NuxtLink>
             <NuxtLink to="/contact" class="text-silver-300 hover:text-white transition-colors" @click="mobileMenuOpen = false">Contact</NuxtLink>
           </div>
         </div>
@@ -92,6 +96,8 @@
               <li><NuxtLink to="/about" class="text-silver-400 hover:text-comet-400 transition-colors">About</NuxtLink></li>
               <li><NuxtLink to="/projects" class="text-silver-400 hover:text-comet-400 transition-colors">Projects</NuxtLink></li>
               <li><NuxtLink to="/roadmap" class="text-silver-400 hover:text-comet-400 transition-colors">Roadmap</NuxtLink></li>
+              <li><NuxtLink to="/docs" class="text-silver-400 hover:text-comet-400 transition-colors">Docs</NuxtLink></li>
+              <li><NuxtLink to="/blog" class="text-silver-400 hover:text-comet-400 transition-colors">Blog</NuxtLink></li>
               <li><NuxtLink to="/contact" class="text-silver-400 hover:text-comet-400 transition-colors">Contact</NuxtLink></li>
             </ul>
           </div>

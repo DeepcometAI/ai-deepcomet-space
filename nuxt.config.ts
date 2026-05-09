@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   nitro: {
     static: true,
     prerender: {
-      routes: ['/', '/about', '/projects', '/roadmap', '/contact'],
+      routes: ['/', '/about', '/projects', '/roadmap', '/contact', '/docs', '/docs/aurelia-intro', '/docs/skyos', '/docs/compiler', '/blog', '/blog/release-0-1-alpha'],
       crawlLinks: true
     }
   },
@@ -18,6 +18,7 @@ export default defineNuxtConfig({
 
   // App Configuration
   app: {
+    baseURL: '/',
     head: {
       title: 'Deepcomet AI — Accelerating Civilization\'s Future',
       meta: [

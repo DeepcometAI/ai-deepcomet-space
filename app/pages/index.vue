@@ -104,6 +104,94 @@
       </div>
     </section>
 
+    <!-- Built for the AI Era Section -->
+    <section class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <ScrollReveal direction="up" class="text-center mb-16">
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-gradient mb-4">Built for the AI Era</h2>
+          <p class="text-silver-400 max-w-2xl mx-auto">
+            Aurelia isn't just another language. It treats neural networks as first-class citizens. 
+            With native tensor primitives, automatic differentiation, and direct MLIR compilation, 
+            you write less code and get more performance.
+          </p>
+        </ScrollReveal>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <ScrollReveal direction="up" :delay="1">
+            <AnimatedCard>
+              <div class="w-14 h-14 rounded-xl bg-comet-600/20 flex items-center justify-center mb-6">
+                <svg class="w-7 h-7 text-comet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl text-silver-100 mb-3">First-Class Tensors</h3>
+              <p class="text-silver-400">
+                No more clunky library wrappers. Tensors are fundamental types understood by the compiler.
+              </p>
+            </AnimatedCard>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" :delay="2">
+            <AnimatedCard>
+              <div class="w-14 h-14 rounded-xl bg-glow-purple/20 flex items-center justify-center mb-6">
+                <svg class="w-7 h-7 text-glow-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl text-silver-100 mb-3">Memory Safety</h3>
+              <p class="text-silver-400">
+                Compile-time guarantees without a garbage collector. Linear types with predictive allocation.
+              </p>
+            </AnimatedCard>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" :delay="3">
+            <AnimatedCard>
+              <div class="w-14 h-14 rounded-xl bg-glow-cyan/20 flex items-center justify-center mb-6">
+                <svg class="w-7 h-7 text-glow-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl text-silver-100 mb-3">Direct NPU Targeting</h3>
+              <p class="text-silver-400">
+                Bypass CPU bottlenecks entirely. Compile directly for NPU via MLIR lowering.
+              </p>
+            </AnimatedCard>
+          </ScrollReveal>
+        </div>
+
+        <!-- Code Example -->
+        <ScrollReveal direction="up" :delay="4">
+          <AnimatedCard class="overflow-hidden">
+            <div class="bg-space-900/90 rounded-lg p-6 font-mono text-sm">
+              <div class="flex items-center gap-2 mb-4">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="text-silver-500 ml-2">aurelia</span>
+              </div>
+              <pre class="text-silver-300 overflow-x-auto whitespace-pre font-mono text-sm leading-relaxed">fn forward_pass(x: Tensor&lt;f32, 2&gt;) -> Tensor&lt;f32, 2&gt; {
+  // Native tensor operations
+  let weights = Tensor::random([256, 512]);
+  let biases = Tensor::zeros([512]);
+  
+  // Automatic differentiation built-in
+  let output = (x @ weights) + biases;
+  return output.relu();
+}
+
+// Compiles directly to MLIR -> NPU
+@target(npu="qualcomm-hexagon")
+fn main() {
+  let input = Tensor::ones([128, 256]);
+  let result = forward_pass(input);
+}</pre>
+            </div>
+          </AnimatedCard>
+        </ScrollReveal>
+      </div>
+    </section>
+
     <!-- Vertical AI Integration Section -->
     <section class="py-24 relative">
       <div class="max-w-7xl mx-auto px-6">
