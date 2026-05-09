@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-space-900 text-silver-100 antialiased;
+    background: linear-gradient(180deg, #0a0f1a 0%, #0f1729 50%, #141d33 100%);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-comet-500/30 text-white;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-space-800/60 backdrop-blur-xl border border-silver-700/30 rounded-2xl;
+  }
+
+  .comet-gradient {
+    @apply bg-gradient-to-r from-comet-400 via-comet-500 to-glow-cyan;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-silver-100 via-comet-200 to-glow-cyan bg-clip-text text-transparent;
+  }
+
+  .orbit-ring {
+    @apply absolute rounded-full border border-silver-700/20;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.3), 0 0 60px rgba(0, 128, 255, 0.1);
+  }
+
+  .nav-link {
+    @apply relative text-silver-400 hover:text-silver-100 transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-comet-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-comet-600 hover:bg-comet-500 text-white font-medium rounded-lg transition-all duration-300 glow-effect;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border border-silver-600 hover:border-comet-400 text-silver-200 hover:text-white font-medium rounded-lg transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:transform hover:scale-[1.02] hover:border-comet-500/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
